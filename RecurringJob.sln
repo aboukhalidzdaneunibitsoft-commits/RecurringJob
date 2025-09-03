@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecurringJob.API", "RecurringJob.API\RecurringJob.API.csproj", "{95F569E4-E7BC-44EB-9CF7-5A72A4A50E69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95F569E4-E7BC-44EB-9CF7-5A72A4A50E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F569E4-E7BC-44EB-9CF7-5A72A4A50E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F569E4-E7BC-44EB-9CF7-5A72A4A50E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F569E4-E7BC-44EB-9CF7-5A72A4A50E69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0ED969B-2D07-4288-8A78-77F2F7541D77}
+	EndGlobalSection
+EndGlobal
