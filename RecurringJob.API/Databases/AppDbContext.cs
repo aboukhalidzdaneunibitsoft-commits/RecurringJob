@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RecurringJob.API.Entitys;
+using RecurringJob.API.Hangfire.Entitys;
 
 namespace RecurringJob.API.Databases;
 
@@ -9,31 +9,32 @@ public class AppDbContext:DbContext
     {
         
     }
+   //public DbSet<TimeTrigger> TimeTriggers { get; set; }
+   // public DbSet<TriggerExecutionLog> TriggerExecutionLogs { get; set; }
    public DbSet<TimeTrigger> TimeTriggers { get; set; }
-    public DbSet<TriggerExecutionLog> TriggerExecutionLogs { get; set; }
+    public DbSet<TimeTriggerExecutionHistory> TimeTriggerExecutionHistories { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<TimeTrigger>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasIndex(e => e.NextExecutionTime);
-            entity.HasIndex(e => e.IsActive);
-        });
+        //modelBuilder.Entity<TimeTrigger>(entity =>
+        //{
+        //    entity.HasKey(e => e.Id);
+        //    entity.HasIndex(e => e.NextExecutionTime);
+        //    entity.HasIndex(e => e.IsActive);
+        //});
 
-        modelBuilder.Entity<TriggerExecutionLog>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasOne(e => e.Trigger)
-                  .WithMany()
-                  .HasForeignKey(e => e.TriggerId)
-                  .OnDelete(DeleteBehavior.Cascade);
+        //modelBuilder.Entity<TriggerExecutionLog>(entity =>
+        //{
+        //    entity.HasKey(e => e.Id);
+        //    entity.HasOne(e => e.Trigger)
+        //          .WithMany()
+        //          .HasForeignKey(e => e.TriggerId)
+        //          .OnDelete(DeleteBehavior.Cascade);
 
-            entity.HasIndex(e => e.TriggerId);
-            entity.HasIndex(e => e.ExecutedAt);
-        });
+        //    entity.HasIndex(e => e.TriggerId);
+        //    entity.HasIndex(e => e.ExecutedAt);
+        //});
 
-        base.OnModelCreating(modelBuilder);
+        //base.OnModelCreating(modelBuilder);
     }
 }
-
