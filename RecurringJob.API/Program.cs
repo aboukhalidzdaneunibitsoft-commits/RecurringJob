@@ -82,3 +82,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
+
+
+// https://claude.ai/share/4db44b97-10e3-4d20-8830-a574fe5b6e69
